@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en " dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./fontawesome-free-5.15.3-web/css/all.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <div class="head">
+          <div class="alert alert-success col-6 p-0" role="" id="totalPrice">
+            مبلغ کل ۰ ریال
+          </div>
+          <div class="alert alert-danger col-6 p-0" role="" id="totalTax">
+            مالیات کل ۰ ریال
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <button
+          type="button"
+          id="newbtn"
+          class="btn btn-outline-secondary btn-light mb-2"
+          onclick="add()"
+        >
+          <i class="fas fa-plus"></i>
+        </button>
+      </div>
+
+      <div class="container text-right">
+        <table
+          class="table table-striped table-bordered table-sm"
+          dir="rtl"
+          id="myTable"
+        >
+          <thead class="table-active">
+            <tr>
+              <th scope="col " class="text-center">ردیف</th>
+              <th scope="col">کالا یا خدمات</th>
+              <th scope="col">شرح</th>
+              <th scope="col">واحد</th>
+              <th scope="col">تعداد</th>
+              <th scope="col">مبلغ واحد(ریال)</th>
+              <th scope="col">تخفیف (درصد)</th>
+              <th scope="col">مالیات(ریال)</th>
+              <th scope="col">مبلغ کل(ریال)</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+            <tr id="newRow">
+              <td class="count"></td>
+              <td>
+                <select name="option" id="kala">
+                  <option value="کالا">کالا</option>
+                  <option value="خدمات">خدمات</option>
+                </select>
+              </td>
+
+              <td><input id="info" required class="empty" /></td>
+              <td><input id="unit" requiredclass="empty" /></td>
+              <td>
+                <input id="number" type="number" required class="empty" />
+              </td>
+              <td><input id="price" type="number" required class="empty" /></td>
+              <td><input id="off" type="number" required class="empty" /></td>
+              <td><input id="tax" type="number" required class="empty" /></td>
+              <td><input id="total" type="number" readonly class="empty" /></td>
+              <td
+                style="
+                  display: flex;
+                  border: none;
+                  justify-content: space-around;
+                "
+              >
+                <i
+                  class="far fa-save save"
+                  onclick="save()"
+                  style="padding: 2px; font-size: 18px"
+                >
+                </i>
+                <i class="fas fa-undo undo" style="padding: 2px"></i>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p id="noRow"></p>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+@font-face {
+  font-family: iransans;
+  src: url(./fonts/FontsFree-Net-ir_sans.ttf);
+}
+@font-face {
+  font-family: byekan;
+  src: url(./fonts/byekan/BYekan.eot);
+  src: url(./fonts/byekan/BYekan.woff);
+  src: url(./fonts/byekan/BYekan.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: byekan;
+  font-size: 16px;
+}
+.container {
+  width: 100%;
+  overflow-x: scroll;
+  font-size: 16px;
+}
+#myTable {
+  font-size: 16px;
+}
+#myTable th {
+  height: 16px;
+}
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.alert {
+  width: 50%;
+  margin: 20px 5px;
+  text-align: center;
+}
+#newbtn {
+  padding: 4px 8px 2px;
+  margin-top: 3px;
+}
+#newbtn:hover,
+#newbtn:focus {
+  background-color: rgb(211, 211, 211);
+  outline: none;
+}
+.myTable input {
+  width: inherit;
+  display: table-column;
+}
+tr {
+  height: 16px;
+}
+button {
+  background-color: rgb(211, 211, 211);
+}
+#newRow {
+  /* visibility: hidden; */
+  display: none;
+}
+.editIcon,
+.save,
+.undo {
+  color: rgb(60, 86, 202);
+  cursor: pointer;
+}
+.deleteIcone {
+  color: red;
+  cursor: pointer;
+}
+p {
+  text-align: center;
+  color: darkgray;
+}
